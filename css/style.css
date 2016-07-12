@@ -131,11 +131,11 @@ textarea:focus + label {
 
 .site-wrapper::before,
 .site-wrapper::after {
-  background-image: url("slide-1.png");
+  background-image: url("../img/ice-cream1.png");
 }
 
 .site-wrapper::after {
-  background-image: url("slide-2.png");
+  background-image: url("../img/ice-cream2.png");
 }
 
 .container {
