@@ -316,7 +316,6 @@ textarea:focus + label {
 }
 
 .header-info {
-  display: inline-block;
   float: right;
   max-width: 300px;
   padding-top: 20px;

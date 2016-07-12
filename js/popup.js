@@ -11,32 +11,19 @@ var message = popup.querySelector("[name=message]");
 
 var storage1 = localStorage.getItem("username");
 var storage2 = localStorage.getItem("email");
-var storage3 = localStorage.getItem("message");
 
 link.addEventListener("click", function(event) {
   event.preventDefault();
   overlay.classList.add("modal-overlay-show");
   popup.classList.add("modal-content-show");
 
-  if (storage1) {
+  if (storage1 && storage2) {
     username.value = storage1;
-    email.focus();
-  } else {
-    username.focus();
-  }
-
-  if (storage2) {
     email.value = storage2;
     message.focus();
   } else {
-    email.focus();
-  }
-
-  if (storage3) {
-    message.value = storage3;
-    message.focus();
-  }
-
+      username.focus();
+    }
 });
 
 close.addEventListener("click", function(event) {
@@ -55,7 +42,6 @@ form.addEventListener("submit", function(event) {
   } else {
     localStorage.setItem("username", username.value);
     localStorage.setItem("email", email.value);
-    localStorage.setItem("message", message.value);
   }
 });
 
